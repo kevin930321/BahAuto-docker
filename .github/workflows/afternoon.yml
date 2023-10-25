@@ -3,6 +3,9 @@ name: 下午的自動化
 on:
     schedule:
         - cron: "30 4 * * *"
+        
+    workflow_dispatch:
+
 
 jobs:
     automation:
@@ -12,13 +15,12 @@ jobs:
             - name: Checkout Repository
               uses: actions/checkout@v3
 
-            - name: Merge Secrets
-              run: node merge.js
-              env:
-                  config: config.yml
-                  secrets: ${{ secrets.SECRETS }}
+            - name: Install Browser
+              #run: npx playwright install webkit --with-deps
+              #run: npx playwright install firefox --with-deps
+              run: npx playwright install chromium --with-deps
 
             - name: Bahamut Automation
-              run: docker run --rm -v "$(pwd)/merged-config.yml:/config.yml" jacoblincool/bahamut-automation
+              run: docker run --rm -v "$(pwd)/config.yml:/config.yml" jacoblincool/bahamut-automation
 
             - uses: gautamkrishnar/keepalive-workflow@master

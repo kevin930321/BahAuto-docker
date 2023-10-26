@@ -30,8 +30,10 @@ jobs:
             - name: Check Path
               run: sudo ls /root/.cache/ms-playwright/chromium-1015/chrome-linux
 
-
             - name: Bahamut Automation
               run: docker run --rm -v "$(pwd)/config.yml:/config.yml" jacoblincool/bahamut-automation
+
+            - name: Check Path Again
+              run: sudo ls /root/.cache/ms-playwright/chromium-1015/chrome-linux
 
             - uses: gautamkrishnar/keepalive-workflow@master

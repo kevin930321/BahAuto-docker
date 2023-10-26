@@ -15,11 +15,17 @@ jobs:
             - name: Checkout Repository
               uses: actions/checkout@v3
 
-            - name: Install Browser
-              run: |
-                mkdir -p /root/.cache/ms-playwright
-                wget
-https://playwright.azureedge.net/builds/chromium/1015/chromium-linux.zip -O /root/.cache/ms-playwright/chromium-1015.zip
+            - name: Create directory for downloaded browser
+              run: mkdir -p /root/.cache/ms-playwright/chromium-1015
+
+            - name: Download browser ZIP file
+              run: wget https://playwright.azureedge.net/builds/chromium/1015/chromium-linux.zip -O /root/.cache/ms-playwright/chromium-1015/chromium-linux.zip
+
+            - name: Extract browser ZIP file
+              run: unzip /root/.cache/ms-playwright/chromium-1015/chromium-linux.zip -d /root/.cache/ms-playwright/chromium-1015
+
+            - name: Set executable path for browser
+              run: export PLAYWRIGHT_CHROMIUM_PATH=/root/.cache/ms-playwright/chromium-1015/chrome-linux/chrome
 
 
             - name: Bahamut Automation

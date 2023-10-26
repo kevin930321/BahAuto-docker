@@ -28,7 +28,7 @@ jobs:
               run: export PLAYWRIGHT_CHROMIUM_PATH=/root/.cache/ms-playwright/chromium-1015/chrome-linux/chrome
 
             - name: Check Path
-              run: sudo ls /root/.cache/ms-playwright/chromium-1015/chrome-linux/chrome
+              run: sudo ls /root/.cache/ms-playwright/chromium-1015/chrome-linux
 
 
             - name: Bahamut Automation

@@ -19,7 +19,7 @@ jobs:
               run: sudo mkdir -p /root/.cache/ms-playwright/chromium-1015
 
             - name: Download browser ZIP file
-              run: wget https://playwright.azureedge.net/builds/chromium/1015/chromium-linux.zip -O /root/.cache/ms-playwright/chromium-1015/chromium-linux.zip
+              run: sudo wget https://playwright.azureedge.net/builds/chromium/1015/chromium-linux.zip -O /root/.cache/ms-playwright/chromium-1015/chromium-linux.zip
 
             - name: Extract browser ZIP file
               run: unzip /root/.cache/ms-playwright/chromium-1015/chromium-linux.zip -d /root/.cache/ms-playwright/chromium-1015

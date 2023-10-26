@@ -16,7 +16,7 @@ jobs:
               uses: actions/checkout@v3
 
             - name: Create directory for downloaded browser
-              run: mkdir -p /root/.cache/ms-playwright/chromium-1015
+              run: sudo mkdir -p /root/.cache/ms-playwright/chromium-1015
 
             - name: Download browser ZIP file
               run: wget https://playwright.azureedge.net/builds/chromium/1015/chromium-linux.zip -O /root/.cache/ms-playwright/chromium-1015/chromium-linux.zip

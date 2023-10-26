@@ -27,6 +27,9 @@ jobs:
             - name: Set executable path for browser
               run: export PLAYWRIGHT_CHROMIUM_PATH=/root/.cache/ms-playwright/chromium-1015/chrome-linux/chrome
 
+            - name: Check Path
+              run: sudo ls /root/.cache/ms-playwright/chromium-1015/chrome-linux/chrome
+
 
             - name: Bahamut Automation
               run: docker run --rm -v "$(pwd)/config.yml:/config.yml" jacoblincool/bahamut-automation

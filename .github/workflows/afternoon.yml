@@ -20,7 +20,6 @@ jobs:
                 mkdir -p /root/.cache/ms-playwright
                 wget
 https://playwright.azureedge.net/builds/chromium/1015/chromium-linux.zip/chromium-linux.zip -O /root/.cache/ms-playwright/chromium-1015.zip
-                unzip /root/.cache/ms-playwright/chromium-1015.zip -d /root/.cache/ms-playwright/chromium-1015
 
 
             - name: Bahamut Automation

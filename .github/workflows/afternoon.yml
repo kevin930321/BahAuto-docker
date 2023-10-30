@@ -22,7 +22,7 @@ jobs:
               run: |
                sudo wget https://playwright.azureedge.net/builds/firefox/1335/firefox-ubuntu-22.04.zip
  -O /root/.cache/ms-playwright/firefox-1335/firefox-ubuntu-22.04.zip
-               sudo unzip /root/.cache/ms-playwright/firefox-1335/firefox-ubuntu-22.04.zip -d /root/.cache/ms-playwright/firefox-1335
+               sudo unzip /root/.cache/ms-playwright/firefox-1335/firefox-ubuntu-22.04.zip -d /root/.cache/ms-playwright/firefox-1335/
 
             - name: Set executable path for browser
               run: export PLAYWRIGHT_CHROMIUM_PATH=/root/.cache/ms-playwright/firefox-1335/firefox/firefox

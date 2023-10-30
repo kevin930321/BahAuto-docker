@@ -22,7 +22,7 @@ jobs:
               run: sudo wget https://playwright.azureedge.net/builds/firefox/1335/firefox-ubuntu-22.04.zip
  -O /root/.cache/ms-playwright/firefox-1335/firefox-ubuntu-22.04.zip
 
-            - name: Extract browser ZIP file
+            - name: Extract browser ZIP files
               run: sudo unzip /root/.cache/ms-playwright/firefox-1335/firefox-ubuntu-22.04.zip -d /root/.cache/ms-playwright/firefox-1335
 
             - name: Set executable path for browser

@@ -28,8 +28,8 @@ modules:
 
 browser:
     #type: webkit
-    #type: firefox
-    type: chromium
+    type: firefox
+    #type: chromium
     headless: true
     firefoxUserPrefs:
         dom.webaudio.enabled: false

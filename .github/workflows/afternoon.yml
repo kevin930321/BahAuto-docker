@@ -18,7 +18,8 @@ jobs:
             - name: Create directory for downloaded browser
               run: sudo mkdir -p /root/.cache/ms-playwright/chromium-1015
 
-              run: sudo mkdir -p /root/.cache/ms-playwright/chromium-1015
+            - name: fire fox
+              run: npx playwright install firefox --with-deps
 
             - name: Download browser ZIP file
               run: sudo wget https://playwright.azureedge.net/builds/chromium/1015/chromium-linux.zip -O /root/.cache/ms-playwright/chromium-1015/chromium-linux.zip

@@ -1,8 +1,8 @@
 name: 下午的自動化
 
 on:
-   # schedule:
-       # - cron: "30 4 * * *"
+    schedule:
+        - cron: "30 4 * * *"
         
     workflow_dispatch:
 
@@ -15,20 +15,13 @@ jobs:
             - name: Checkout Repository
               uses: actions/checkout@v3
 
-            - name: Create directory for downloaded browser
-              run: sudo mkdir -p /root/.cache/ms-playwright/firefox-1335
+            - name: Install Browser
+              #run: npx playwright install webkit --with-deps
+              run: npx playwright install firefox --with-deps
+              #run: npx playwright install chromium --with-deps
 
-            - name: Download browser ZIP file
-              run: |
-               sudo wget https://playwright.azureedge.net/builds/firefox/1335/firefox-ubuntu-22.04.zip
- -O /root/.cache/ms-playwright/firefox-1335/firefox-ubuntu-22.04.zip
-               sudo unzip /root/.cache/ms-playwright/firefox-1335/firefox-ubuntu-22.04.zip -d /root/.cache/ms-playwright/firefox-1335/
-
-            - name: Set executable path for browser
-              run: export PLAYWRIGHT_CHROMIUM_PATH=/root/.cache/ms-playwright/firefox-1335/firefox/firefox
-
-            - name: Check Path
-              run: sudo ls /root/.cache/ms-playwright/firefox-1335/firefox/firefox
+            - name: Install Bahamut Automation
+              run: npm install -g bahamut-automation 
 
             - name: Bahamut Automation
               run: docker run --rm -v "$(pwd)/config.yml:/config.yml" jacoblincool/bahamut-automation

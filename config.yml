@@ -28,10 +28,10 @@ modules:
 
 browser:
     #type: webkit
-    #type: firefox
+    type: firefox
     #type: chromium
     #type: chrome
-    type: msedge
+    #type: msedge
     headless: true
     firefoxUserPrefs:
         dom.webaudio.enabled: false

@@ -27,8 +27,8 @@ modules:
         webhook: https://discord.com/api/webhooks/1165878055898726410/Mg8ZaGSFFQ9vGiYqa02muybUjF_p-rHtNxi_jiFC4vAva5bDR7t1TzLmg8dZGHGcZeOa
 
 browser:
-    #type: webkit
-    type: firefox
+    type: webkit
+    #type: firefox
     #type: chromium
     #type: chrome
     #type: msedge

@@ -16,7 +16,7 @@ modules:
     answer:
     lottery:
         max_attempts: 50 
-        max_parallel: 1 
+        max_parallel: 3
     del_mail:
         match:
             - title: "【勇者福利社】成功獲得抽獎資格通知信"
@@ -28,8 +28,10 @@ modules:
 
 browser:
     #type: webkit
-    type: firefox
+    #type: firefox
     #type: chromium
+    #type: chrome
+    type: msedge
     headless: true
     firefoxUserPrefs:
         dom.webaudio.enabled: false

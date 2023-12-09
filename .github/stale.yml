@@ -1,13 +1,3 @@
-# Number of days of inactivity before an issue becomes stale
-daysUntilStale: 7
-# Number of days of inactivity before a stale issue is closed
-daysUntilClose: 7
-# Issues with these labels will never be considered stale
-exemptLabels:
-  - pinned
-# Label to use when marking an issue as stale
-staleLabel: old
-# Comment to post when marking an issue as stale. Set to `false` to disable
-markComment: false
-# Comment to post when closing a stale issue. Set to `false` to disable
-closeComment: false
+version https://git-lfs.github.com/spec/v1
+oid sha256:d28f3c3e763d02a34c5c2c2eb04a66618f2190ea36ec7743af7cd5479b57e8e6
+size 491

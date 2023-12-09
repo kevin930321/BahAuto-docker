@@ -1,30 +1,3 @@
-name: 下午的自動化
-
-on:
-    schedule:
-        - cron: "30 4 * * *"
-        
-    workflow_dispatch:
-
-
-jobs:
-    automation:
-        name: 自動化
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout Repository
-              uses: actions/checkout@v3
-
-            - name: Install Browser
-              run: |
-                #npx playwright install webkit --with-deps
-                npx playwright install firefox #--with-deps
-                #npx playwright install chromium --with-deps
-
-            #- name: Install Bahamut Automation
-              #run: npm install -g bahamut-automation 
-
-            - name: Bahamut Automation
-              run: docker run --rm -v "$(pwd)/config.yml:/config.yml" jacoblincool/bahamut-automation
-
-            - uses: gautamkrishnar/keepalive-workflow@master
+version https://git-lfs.github.com/spec/v1
+oid sha256:dd8959ef81cff91c26f375510601a3ab98e830512d1c4da013608419b8af45d4
+size 824

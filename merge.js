@@ -1,12 +1,3 @@
-const fs = require("node:fs");
-
-const { config, secrets } = process.env;
-const parsed_secrets = JSON.parse(secrets);
-
-let merged = fs.readFileSync(config, "utf8");
-for (const key in parsed_secrets) {
-    const regex = new RegExp("\\$" + key, "g");
-    console.log(`Merging ${merged.match(regex)?.length ?? 0} ${regex}`);
-    merged = merged.replace(regex, parsed_secrets[key]);
-}
-fs.writeFileSync("merged-config.yml", merged);
+version https://git-lfs.github.com/spec/v1
+oid sha256:ff8110afe8aebe993c380afd050d50bf4eba1810d0dc537c8907f69ad32148a3
+size 427
